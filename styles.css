@@ -92,33 +92,30 @@ h1 span { display: block; color: transparent; -webkit-text-stroke: 1px var(--pap
 .service-list article > p { margin: 0; color: #c2b7c5; line-height: 1.65; }
 .service-list small { color: #776d7a; font: .58rem/1.6 var(--mono); letter-spacing: .06em; }
 
-.plugin { width: min(1380px, 100%); margin: 0 auto; padding: clamp(4rem, 8vw, 8rem) max(1.5rem, calc((100% - 1180px) / 2)); display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(3rem, 6vw, 5rem); align-items: stretch; background: #1a151e; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.plugin-copy { width: min(820px, 100%); }
-.plugin-copy .section-id { margin-bottom: 3rem; }
-.plugin-copy h2 { font-size: clamp(2.9rem, 5vw, 4.8rem); overflow-wrap: normal; word-break: normal; }
-.plugin-copy h2 span { display: block; white-space: nowrap; }
-.plugin-copy > p:not(.section-id) { color: var(--muted); line-height: 1.72; }
+.plugin { width: min(1180px, calc(100% - 3rem)); margin: 0 auto; padding: 8rem 0 9rem; }
+.plugin-heading { display: grid; grid-template-columns: 1.28fr .72fr; gap: 5rem; padding: 3.5rem 0 5.5rem; }
+.plugin-heading h2 { max-width: 760px; font-size: clamp(3.2rem, 6.2vw, 6rem); overflow-wrap: normal; word-break: normal; }
+.plugin-heading h2 span { display: block; white-space: nowrap; }
+.plugin-details > p { margin: .3rem 0 0; color: var(--muted); line-height: 1.7; }
 .plugin-data { margin: 2.2rem 0; border-top: 1px solid var(--line); }
 .plugin-data div { display: grid; grid-template-columns: 90px 1fr; padding: .8rem 0; border-bottom: 1px solid var(--line); }
 .plugin-data dt { color: #776d7a; font: .59rem var(--mono); letter-spacing: .08em; }
 .plugin-data dd { margin: 0; color: #d6cbd8; font: .66rem var(--mono); }
-.plugin-note { font-size: .8rem; }
+.plugin-details .plugin-note { margin-top: 0; font-size: .8rem; }
 .plugin-window { width: 100%; margin: 0; background: #0c0c11; border: 1px solid #4a4450; box-shadow: 18px 18px 0 #0e0a11; }
 .window-bar { height: 34px; display: flex; align-items: center; justify-content: space-between; padding: 0 .8rem; color: #918a95; background: #25232b; border-bottom: 1px solid #4a4450; }
 .window-bar b, .window-bar span { font: 500 .58rem var(--mono); letter-spacing: .06em; }
 .plugin-window img { display: block; width: 100%; height: auto; }
 .plugin-window figcaption { padding: .75rem .9rem; color: #77707b; font: .58rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
 
-.contact { width: min(1180px, calc(100% - 3rem)); margin: 8rem auto 2rem; padding: 1.5rem 0 0; background: var(--purple); }
-.contact .section-id { margin: 0 1.5rem; color: #e5bdf6; border-color: rgba(255,255,255,.35); }
-.contact-main { display: grid; grid-template-columns: 1.15fr .85fr; }
+.contact { width: min(1180px, calc(100% - 3rem)); margin: 0 auto; padding: 8rem 0 2rem; }
+.contact-main { display: grid; grid-template-columns: 1.28fr .72fr; gap: 5rem; padding: 3.5rem 0 0; }
 .contact-main > * { min-width: 0; }
-.contact-main > div { padding: clamp(2.5rem, 7vw, 6rem); }
-.contact h2 { font-size: clamp(4.5rem, 10vw, 9rem); }
+.contact h2 { font-size: clamp(3.2rem, 6.2vw, 6rem); }
 .contact-main > div > p { max-width: 500px; margin: 1.5rem 0 2rem; line-height: 1.6; }
-.button-discord { gap: .65rem; color: #151017; background: #fff; }
-.button-discord:hover { color: #fff; background: #17101c; transform: translate(-2px, -2px); }
-.contact aside { padding: clamp(2.5rem, 6vw, 5rem); background: #23132b; }
+.button-discord { gap: .65rem; color: #fff; background: var(--purple); }
+.button-discord:hover { color: #fff; background: #9135bd; transform: translate(-2px, -2px); }
+.contact aside { padding: 2rem; background: #1a151e; border-top: 3px solid var(--purple); }
 .contact aside > p { margin: 0 0 2rem; color: var(--purple-light); font: 700 .65rem var(--mono); letter-spacing: .1em; }
 .contact aside ul { margin: 0; padding: 0; list-style: none; counter-reset: ping; }
 .contact aside li { counter-increment: ping; padding: 1.1rem 0 1.1rem 2.4rem; position: relative; color: #cec3d0; border-top: 1px solid var(--line); line-height: 1.5; }
@@ -138,17 +135,14 @@ footer > a:last-child { justify-self: end; text-decoration: none; }
   .hero-visual img { max-width: 660px; }
   .hero-channels { position: static; grid-row: 2; right: auto; margin-bottom: 1rem; }
   .section-heading { grid-template-columns: 1fr; gap: 2rem; }
+  .plugin-heading { grid-template-columns: 1fr; gap: 2rem; }
   .service-list article { grid-template-columns: .8fr 1.2fr; }
   .service-list small { grid-column: 2; }
-  .contact { overflow: hidden; }
-  .contact-main { grid-template-columns: 1fr; }
-  .contact-main > div { padding: 4rem 2rem; }
-  .contact h2 { font-size: clamp(4rem, 16vw, 7rem); overflow-wrap: anywhere; }
-  .contact aside { padding: 3rem 2rem; }
+  .contact-main { grid-template-columns: 1fr; gap: 3rem; }
 }
 
 @media (max-width: 600px) {
-  .site-header, .hero, .help, .contact, footer { width: min(100% - 1.5rem, 1280px); }
+  .site-header, .hero, .help, .plugin, .contact, footer { width: min(100% - 1.5rem, 1280px); }
   .site-header { height: 68px; }
   .brand img { width: 40px; }
   .brand > span { font-size: .82rem; }
@@ -168,15 +162,14 @@ footer > a:last-child { justify-self: end; text-decoration: none; }
   .section-heading h2 { font-size: clamp(3rem, 14vw, 4.5rem); }
   .service-list article { grid-template-columns: 1fr; gap: 1rem; padding: 1.6rem 0; }
   .service-list small { grid-column: 1; }
-  .plugin { padding: 5rem .75rem; }
-  .plugin-copy .section-id { margin-bottom: 2rem; }
-  .plugin-copy h2 { font-size: clamp(3rem, 13.5vw, 4.6rem); }
+  .plugin { padding: 5.5rem 0; }
+  .plugin-heading { padding: 2.5rem 0 3.5rem; }
+  .plugin-heading h2 { font-size: clamp(3rem, 14vw, 4.5rem); }
   .plugin-window { box-shadow: 8px 8px 0 #0e0a11; }
-  .contact { margin-top: 5rem; }
-  .contact-main { grid-template-columns: 1fr; }
-  .contact-main > div { padding: 3rem 1.5rem; }
-  .contact h2 { font-size: clamp(4rem, 22vw, 6.5rem); }
-  .contact aside { padding: 2.5rem 1.5rem; }
+  .contact { padding: 5.5rem 0 2rem; }
+  .contact-main { padding-top: 2.5rem; gap: 2.5rem; }
+  .contact h2 { font-size: clamp(3rem, 14vw, 4.5rem); }
+  .contact aside { padding: 2rem 1.25rem; }
   footer { min-height: 170px; grid-template-columns: 1fr auto; }
   footer p { grid-row: 2; grid-column: 1 / -1; }
 }
