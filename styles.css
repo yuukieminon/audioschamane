@@ -92,7 +92,8 @@ h1 span { display: block; color: transparent; -webkit-text-stroke: 1px var(--pap
 .service-list article > p { margin: 0; color: #c2b7c5; line-height: 1.65; }
 .service-list small { color: #776d7a; font: .58rem/1.6 var(--mono); letter-spacing: .06em; }
 
-.plugin { width: min(1380px, 100%); margin: 0 auto; padding: clamp(4rem, 8vw, 8rem) max(1.5rem, calc((100% - 1180px) / 2)); display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(2.5rem, 7vw, 7rem); align-items: center; background: #1a151e; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.plugin { width: min(1380px, 100%); margin: 0 auto; padding: clamp(4rem, 8vw, 8rem) max(1.5rem, calc((100% - 1180px) / 2)); display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(3rem, 6vw, 5rem); align-items: stretch; background: #1a151e; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.plugin-copy { width: min(820px, 100%); }
 .plugin-copy .section-id { margin-bottom: 3rem; }
 .plugin-copy h2 { font-size: clamp(2.9rem, 5vw, 4.8rem); overflow-wrap: normal; word-break: normal; }
 .plugin-copy h2 span { display: block; white-space: nowrap; }
@@ -102,7 +103,7 @@ h1 span { display: block; color: transparent; -webkit-text-stroke: 1px var(--pap
 .plugin-data dt { color: #776d7a; font: .59rem var(--mono); letter-spacing: .08em; }
 .plugin-data dd { margin: 0; color: #d6cbd8; font: .66rem var(--mono); }
 .plugin-note { font-size: .8rem; }
-.plugin-window { margin: 0; background: #0c0c11; border: 1px solid #4a4450; box-shadow: 18px 18px 0 #0e0a11; }
+.plugin-window { width: 100%; margin: 0; background: #0c0c11; border: 1px solid #4a4450; box-shadow: 18px 18px 0 #0e0a11; }
 .window-bar { height: 34px; display: flex; align-items: center; justify-content: space-between; padding: 0 .8rem; color: #918a95; background: #25232b; border-bottom: 1px solid #4a4450; }
 .window-bar b, .window-bar span { font: 500 .58rem var(--mono); letter-spacing: .06em; }
 .plugin-window img { display: block; width: 100%; height: auto; }
@@ -127,12 +128,6 @@ footer { width: min(1180px, calc(100% - 3rem)); min-height: 110px; margin: 0 aut
 footer .brand { color: var(--paper); font-family: var(--sans); font-size: .78rem; }
 footer .brand img { width: 42px; }
 footer > a:last-child { justify-self: end; text-decoration: none; }
-
-@media (max-width: 1100px) {
-  .plugin { grid-template-columns: 1fr; }
-  .plugin-copy { max-width: none; }
-  .plugin-window { width: 100%; }
-}
 
 @media (max-width: 900px) {
   nav a:not(.nav-contact) { display: none; }
